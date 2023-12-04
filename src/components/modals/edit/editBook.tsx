@@ -2,6 +2,7 @@ import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { Book } from "../../../pages/addBook/AddBook";
 import { styled } from "styled-components";
 import { Action } from "@remix-run/router";
+import { infoToast } from "../../../utils/toastNotifications";
 
 type editProp = {
   id: number;
@@ -38,6 +39,7 @@ const EditBook = ({ id, close }: editProp) => {
   useEffect(() => {
     if (done) {
       localStorage.setItem("webersBooks", JSON.stringify(books));
+      infoToast("Book Updated");
       close(undefined);
     }
   }, [done]);
