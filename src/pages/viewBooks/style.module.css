@@ -1,0 +1,24 @@
+.search,
+.filter {
+  border: 1px solid var(--border-color);
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  height: 2em;
+}
+
+.search input {
+  font-weight: 400;
+  font-size: 14px;
+  border: 0;
+  margin: 0 0 0 20px;
+  min-width: 200px;
+
+  outline: 0;
+  background-color: var(--background-6);
+}
+
+.search input:focus {
+  outline: none !important;
+}
